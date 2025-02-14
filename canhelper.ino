@@ -9,8 +9,9 @@
 #define CAN1_SPEED CAN_500KBPS
 #define CAN1_CLOCK MCP_8MHZ
 
-// #define CAN2_PIN	9
-#define CAN2_PIN 0  // 0 - disabled
+// CAN-2 disabled by default
+// #define CAN2_PIN 9 // can2 enabled
+#define CAN2_PIN 0  // can2 disabled
 #define CAN2_SPEED CAN_125KBPS
 #define CAN2_CLOCK MCP_8MHZ
 
