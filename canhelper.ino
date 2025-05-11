@@ -1,3 +1,6 @@
+// Version 1.0.1
+// https://github.com/canhelper/canhelper
+
 #include <SPI.h>
 #include <math.h>
 
@@ -105,12 +108,12 @@ bool setBaudRate(uint8_t pin, uint32_t canClock, uint32_t baudRate)
         mcp2515_writeRegister(pin, 0x28, config.cnf3);
 
         Serial.print("Set baud rate ");
-        Serial.println(baudRate);
+        Serial.print(baudRate);
         Serial.println(" OK.");
         return true;
     } else {
         Serial.print("Set baud rate ");
-        Serial.println(baudRate);
+        Serial.print(baudRate);
         Serial.println(" failed.");
         return false;
     }
@@ -209,7 +212,8 @@ void mcp2515_readMessage(uint8_t pin)
 void setup()
 {
     Serial.begin(9600);
-    Serial.println("CAN Helper");
+    Serial.println("CAN Helper v1.0.1");
+    Serial.println("https://github.com/canhelper/canhelper");
 
     if (CAN1_PIN > 0) {
         setupMCP2515(CAN1_PIN, CAN1_MCP_CLOCK, CAN1_BAUD_RATE);
